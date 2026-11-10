@@ -93,12 +93,9 @@
 
           <!-- Certificat 2ème année -->
           <div class="cert-slot" id="slot-2">
-            <input type="file" accept="image/*,.pdf" id="file-2" title="Ajouter le certificat">
-            <button class="cert-remove" id="remove-2">✕ Supprimer</button>
             <div class="cert-slot-icon">📄</div>
             <div class="cert-slot-label">Certificat de stage</div>
             <div class="cert-slot-sub">2ᵉ année · BTS SIO</div>
-            <div class="cert-slot-hint">// CLIQUER POUR AJOUTER</div>
           </div>
 
         </div>
@@ -148,46 +145,6 @@
         document.getElementById('panel-' + btn.dataset.tab).classList.add('active');
       });
     });
-
-    // ── CERTIFICATS — upload image ──
-    [1, 2].forEach(n => {
-      const input  = document.getElementById('file-' + n);
-      const slot   = document.getElementById('slot-' + n);
-      const remove = document.getElementById('remove-' + n);
-
-      input.addEventListener('change', function() {
-        const file = this.files[0];
-        if (!file) return;
-
-        if (file.type.startsWith('image/')) {
-          const reader = new FileReader();
-          reader.onload = ev => {
-            let img = slot.querySelector('img');
-            if (!img) { img = document.createElement('img'); slot.appendChild(img); }
-            img.src = ev.target.result;
-            img.alt = 'Certificat année ' + n;
-            slot.classList.add('has-image');
-          };
-          reader.readAsDataURL(file);
-        } else {
-          // PDF : afficher nom du fichier
-          slot.classList.add('has-image');
-          let img = slot.querySelector('img');
-          if (!img) { img = document.createElement('img'); slot.appendChild(img); }
-          img.src = '';
-          img.alt = '';
-          // Remplacer par un bloc texte
-          let pdfBlock = slot.querySelector('.pdf-preview');
-          if (!pdfBlock) {
-            pdfBlock = document.createElement('div');
-            pdfBlock.className = 'pdf-preview';
-            pdfBlock.style.cssText = 'position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem;padding:1.5rem;';
-            slot.appendChild(pdfBlock);
-          }
-          pdfBlock.innerHTML = '<div style="font-size:2rem;">📄</div><div style="font-family:var(--mono);font-size:12px;color:var(--cyan);font-weight:700;">' + file.name + '</div><div style="font-family:var(--mono);font-size:10px;color:var(--muted);">PDF ajouté</div>';
-        }
-      });
-
       remove.addEventListener('click', e => {
         e.stopPropagation();
         slot.classList.remove('has-image');
