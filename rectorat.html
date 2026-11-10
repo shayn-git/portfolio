@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rectorat — Portfolio Eliott Vicomte</title>
+  <link rel="icon" href="cadenas_svg.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="rectorat.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo">ev://portfolio</div>
+    <ul class="nav-links">
+      <li><a href="index.html">accueil</a></li>
+      <li><a href="realisations.html">réalisations</a></li>
+      <li><a href="rectorat.html" class="active">rectorat</a></li>
+      <li><a href="veille.html">veille</a></li>
+    </ul>
+    <div class="nav-status"><div class="status-dot"></div>Disponible</div>
+    <button class="nav-burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav-drawer" id="drawer">
+    <ul>
+      <li><a href="index.html">accueil</a></li>
+      <li><a href="realisations.html">réalisations</a></li>
+      <li><a href="rectorat.html" class="active">rectorat</a></li>
+      <li><a href="veille.html">veille</a></li>
+    </ul>
+    <div class="drawer-status"><div class="status-dot"></div>Disponible</div>
+  </div>
+
+  <div class="page-wrapper">
+
+    <header class="page-header" data-label="BTS">
+      <p class="page-tag">BTS SIO SISR · Session 2026</p>
+      <h1 class="page-title">Épreuves <span>professionnelles</span></h1>
+      <p class="page-subtitle">Réalisations et documents officiels — Campus la Châtaigneraie</p>
+    </header>
+
+    <!-- TABS -->
+    <div class="epreuve-tabs">
+      <button class="tab-btn active" data-tab="e5">[ E5 ]</button>
+      <button class="tab-btn" data-tab="e6">[ E6 ]</button>
+    </div>
+
+    <!-- ══ PANEL E5 ══ -->
+    <div class="tab-panel active" id="panel-e5">
+
+      <!-- Tableau synthèse -->
+      <section class="section" style="padding-top:0; border-bottom: 1px solid var(--border);">
+        <div class="section-header">
+          <span class="section-label">tableau de synthèse</span>
+          <div class="section-line"></div>
+        </div>
+        <p style="font-size:13px;color:var(--muted);margin-bottom:1.5rem;line-height:1.7;">
+          Tableau de synthèse des compétences mobilisées — Épreuve E5 · Annexe VI.5
+        </p>
+        <a href="EVI_BTS_SIO_Annexe_VI.5_Epreuve E5 - Tableau de synthe_se_2026.pdf"
+           download
+           class="xlsx-access">
+          <div class="xlsx-icon">XLSX</div>
+          <div class="xlsx-info">
+            <div class="xlsx-title">Tableau de synthèse E5</div>
+            <div class="xlsx-sub">EVI_BTS_SIO_Annexe_VI.5 · Session 2026</div>
+          </div>
+          <span class="xlsx-arrow">→</span>
+        </a>
+      </section>
+
+      <!-- Certificats de stage -->
+      <section class="section" style="padding-top:3rem;">
+        <div class="section-header">
+          <span class="section-label">certificats de stage</span>
+          <div class="section-line"></div>
+        </div>
+        <p style="font-size:13px;color:var(--muted);margin-bottom:1.75rem;line-height:1.7;">
+          Attestations de stage — 1ʳᵉ et 2ᵉ année de BTS SIO
+        </p>
+        <div class="certs-grid">
+
+          <!-- Certificat 1ère année -->
+          <div class="cert-slot" id="slot-1" style="cursor:default;">
+            <div class="cert-slot-icon">📄</div>
+            <div class="cert-slot-label">Certificat de stage</div>
+            <div class="cert-slot-sub">1ʳᵉ année · BTS SIO</div>
+            <button onclick="window.open('EVI_AttestationDeStage.pdf', '_blank')" style="margin-top:1.2rem;background:transparent;border:1px solid var(--cyan);color:var(--cyan);font-family:var(--mono);font-size:11px;letter-spacing:.08em;padding:.5rem 1.1rem;cursor:pointer;transition:background .2s,color .2s;" onmouseover="this.style.background='var(--cyan)';this.style.color='#0a0a0f'" onmouseout="this.style.background='transparent';this.style.color='var(--cyan)'">// CONSULTER →</button>
+          </div>
+
+          <!-- Certificat 2ème année -->
+          <div class="cert-slot" id="slot-2">
+            <input type="file" accept="image/*,.pdf" id="file-2" title="Ajouter le certificat">
+            <button class="cert-remove" id="remove-2">✕ Supprimer</button>
+            <div class="cert-slot-icon">📄</div>
+            <div class="cert-slot-label">Certificat de stage</div>
+            <div class="cert-slot-sub">2ᵉ année · BTS SIO</div>
+            <div class="cert-slot-hint">// CLIQUER POUR AJOUTER</div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ══ PANEL E6 ══ -->
+    <div class="tab-panel" id="panel-e6">
+      <section class="section" style="padding-top:0;">
+        <div class="e6-placeholder">
+          <span class="e6-badge">// EN PRÉPARATION</span>
+          <h3>Épreuve E6</h3>
+          <p>Le contenu de l'épreuve E6 sera ajouté prochainement. Revenez bientôt.</p>
+        </div>
+      </section>
+    </div>
+
+  </div>
+
+  <footer>
+    <span class="footer-copy">© 2026 Eliott Vicomte — BTS SIO SISR</span>
+    <div class="footer-links">
+      <a href="https://github.com/shayn-git" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/eliott-vicomte-115887398/" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script>
+    // ── NAV ──
+    const burger = document.getElementById('burger');
+    const drawer = document.getElementById('drawer');
+    if (burger) burger.addEventListener('click', () => {
+      burger.classList.toggle('open');
+      drawer.classList.toggle('open');
+    });
+    window.addEventListener('scroll', () => {
+      document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    // ── TABS ──
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById('panel-' + btn.dataset.tab).classList.add('active');
+      });
+    });
+
+    // ── CERTIFICATS — upload image ──
+    [1, 2].forEach(n => {
+      const input  = document.getElementById('file-' + n);
+      const slot   = document.getElementById('slot-' + n);
+      const remove = document.getElementById('remove-' + n);
+
+      input.addEventListener('change', function() {
+        const file = this.files[0];
+        if (!file) return;
+
+        if (file.type.startsWith('image/')) {
+          const reader = new FileReader();
+          reader.onload = ev => {
+            let img = slot.querySelector('img');
+            if (!img) { img = document.createElement('img'); slot.appendChild(img); }
+            img.src = ev.target.result;
+            img.alt = 'Certificat année ' + n;
+            slot.classList.add('has-image');
+          };
+          reader.readAsDataURL(file);
+        } else {
+          // PDF : afficher nom du fichier
+          slot.classList.add('has-image');
+          let img = slot.querySelector('img');
+          if (!img) { img = document.createElement('img'); slot.appendChild(img); }
+          img.src = '';
+          img.alt = '';
+          // Remplacer par un bloc texte
+          let pdfBlock = slot.querySelector('.pdf-preview');
+          if (!pdfBlock) {
+            pdfBlock = document.createElement('div');
+            pdfBlock.className = 'pdf-preview';
+            pdfBlock.style.cssText = 'position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem;padding:1.5rem;';
+            slot.appendChild(pdfBlock);
+          }
+          pdfBlock.innerHTML = '<div style="font-size:2rem;">📄</div><div style="font-family:var(--mono);font-size:12px;color:var(--cyan);font-weight:700;">' + file.name + '</div><div style="font-family:var(--mono);font-size:10px;color:var(--muted);">PDF ajouté</div>';
+        }
+      });
+
+      remove.addEventListener('click', e => {
+        e.stopPropagation();
+        slot.classList.remove('has-image');
+        const img = slot.querySelector('img');
+        if (img) img.remove();
+        const pdfBlock = slot.querySelector('.pdf-preview');
+        if (pdfBlock) pdfBlock.remove();
+        input.value = '';
+      });
+    });
+  </script>
+
+</body>
+</html>

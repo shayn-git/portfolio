@@ -1,0 +1,175 @@
+/* ============================================================
+   VEILLE PAGE — veille.css
+   ============================================================ */
+
+/* ── PLACEHOLDER ── */
+.veille-placeholder {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f4f7fb 0%, #e8f4fb 60%, #f0fdf8 100%);
+  border-bottom: 1px solid var(--border2);
+  padding: 4rem 3rem;
+}
+
+.v-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.placeholder-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* Terminal côté gauche */
+.placeholder-terminal {
+  width: 100%;
+  animation: fadeUp .7s ease forwards;
+}
+
+/* Texte côté droit */
+.placeholder-text {
+  animation: fadeUp .7s ease forwards .15s;
+  opacity: 0;
+}
+
+.placeholder-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: #f59e0b;
+  background: rgba(245,158,11,0.1);
+  border: 1px solid rgba(245,158,11,0.3);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.08em;
+}
+
+.badge-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #f59e0b;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.placeholder-text h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: var(--text);
+  margin-bottom: 1.25rem;
+}
+
+.placeholder-text h2 span { color: var(--cyan); }
+
+.placeholder-text > p {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-bottom: 2rem;
+  max-width: 440px;
+}
+
+.placeholder-block {
+  margin-bottom: 1.25rem;
+}
+
+.block-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--cyan);
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
+}
+
+/* Pills catégories colorées */
+.cat-pill {
+  font-family: var(--mono);
+  font-size: 10px;
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.cat-vuln   { background: rgba(239,68,68,0.1);  color: #ef4444; border: 1px solid rgba(239,68,68,0.25); }
+.cat-rgpd   { background: rgba(8,145,178,0.1);  color: var(--cyan); border: 1px solid rgba(8,145,178,0.25); }
+.cat-reseau { background: rgba(16,185,129,0.1); color: var(--mint); border: 1px solid rgba(16,185,129,0.25); }
+.cat-malware{ background: rgba(245,158,11,0.1); color: #d97706; border: 1px solid rgba(245,158,11,0.25); }
+
+/* Terminal body override pour veille */
+.placeholder-terminal .terminal-body {
+  background: #f8fbff;
+}
+
+.t-loading { color: var(--cyan); }
+
+/* ── MÉTHODOLOGIE ── */
+.method-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border2);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.method-card {
+  background: var(--surface);
+  padding: 2rem 1.5rem;
+  transition: background .2s;
+}
+
+.method-card:hover { background: rgba(8,145,178,0.04); }
+
+.method-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--cyan);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.1em;
+}
+
+.method-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.method-desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .placeholder-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .placeholder-terminal { max-width: 420px; }
+  .veille-placeholder { padding: 3rem 1.5rem; }
+  .method-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 500px) {
+  .method-grid { grid-template-columns: 1fr; }
+}

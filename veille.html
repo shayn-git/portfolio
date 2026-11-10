@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veille — Portfolio Eliott Vicomte</title>
+  <link rel="icon" href="cadenas_svg.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="veille.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo">ev://portfolio</div>
+    <ul class="nav-links">
+      <li><a href="index.html">accueil</a></li>
+      <li><a href="realisations.html">réalisations</a></li>
+      <li><a href="rectorat.html">rectorat</a></li>
+      <li><a href="veille.html" class="active">veille</a></li>
+    </ul>
+    <div class="nav-status"><div class="status-dot"></div>Disponible</div>
+    <button class="nav-burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav-drawer" id="drawer">
+    <ul>
+      <li><a href="index.html">accueil</a></li>
+      <li><a href="realisations.html">réalisations</a></li>
+      <li><a href="rectorat.html">rectorat</a></li>
+      <li><a href="veille.html" class="active">veille</a></li>
+    </ul>
+    <div class="drawer-status"><div class="status-dot"></div>Disponible</div>
+  </div>
+
+  <div class="page-wrapper">
+
+    <header class="page-header" data-label="VEILLE">
+      <p class="page-tag">Cybersécurité — Actualité &amp; Menaces</p>
+      <h1 class="page-title">Veille <span>technologique</span></h1>
+      <p class="page-subtitle">Suivi des actualités cybersécurité, nouvelles vulnérabilités et tendances du secteur.</p>
+    </header>
+
+    <!-- PLACEHOLDER PRINCIPAL -->
+    <section class="veille-placeholder">
+      <canvas id="v-particles" class="v-canvas"></canvas>
+      <div class="placeholder-inner">
+
+        <div class="placeholder-terminal">
+          <div class="terminal-bar">
+            <div class="t-dot"></div><div class="t-dot"></div><div class="t-dot"></div>
+            <span class="terminal-title">bash — veille@cyber</span>
+          </div>
+          <div class="terminal-body">
+            <div class="t-line"><span class="t-prompt">~$</span><span class="t-cmd"> fetch --source cert-fr,anssi,cve</span></div>
+            <div class="t-output t-loading">Connexion aux flux RSS<span class="t-dots"></span></div>
+            <div class="t-line" style="margin-top:.5rem"><span class="t-prompt">~$</span><span class="t-cmd"> parse --filter cybersecurity</span></div>
+            <div class="t-output" style="color:var(--muted)">En attente d'articles<span class="t-dots"></span></div>
+            <div class="t-line" style="margin-top:.5rem"><span class="t-prompt">~$</span><span class="t-cmd"> status</span></div>
+            <div class="t-output" style="color:#f59e0b">⚠ Section en cours de construction</div>
+            <div class="t-line"><span class="t-prompt">~$</span><span class="t-cursor"></span></div>
+          </div>
+        </div>
+
+        <div class="placeholder-text">
+          <div class="placeholder-badge"><span class="badge-dot"></span>En construction</div>
+          <h2>Les articles<br>arrivent <span>bientôt.</span></h2>
+          <p>Cette section sera enrichie avec mes articles de veille cybersécurité — vulnérabilités, menaces, RGPD, réseaux et actualités du secteur.</p>
+
+          <div class="placeholder-block">
+            <div class="block-label">// Sources surveillées</div>
+            <div class="pills" style="margin-top:.6rem">
+              <span class="pill">CERT-FR</span>
+              <span class="pill">ANSSI</span>
+              <span class="pill">CVE Details</span>
+              <span class="pill">The Hacker News</span>
+              <span class="pill">Krebs on Security</span>
+              <span class="pill">MITRE ATT&amp;CK</span>
+            </div>
+          </div>
+
+          <div class="placeholder-block">
+            <div class="block-label">// Catégories prévues</div>
+            <div class="pills" style="margin-top:.6rem">
+              <span class="cat-pill cat-vuln">Vulnérabilités</span>
+              <span class="cat-pill cat-rgpd">RGPD / Juridique</span>
+              <span class="cat-pill cat-reseau">Réseau / Infra</span>
+              <span class="cat-pill cat-malware">Malwares</span>
+            </div>
+          </div>
+
+          <a href="index.html" class="btn btn-outline" style="margin-top:2rem">← Retour à l'accueil</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MÉTHODOLOGIE -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-label">méthodologie de veille</span>
+        <div class="section-line"></div>
+      </div>
+      <div class="method-grid">
+        <div class="method-card">
+          <div class="method-num">[01]</div>
+          <div class="method-title">Sources officielles</div>
+          <p class="method-desc">CERT-FR, ANSSI, NVD/CVE — pour les alertes et avis de sécurité officiels français et internationaux.</p>
+        </div>
+        <div class="method-card">
+          <div class="method-num">[02]</div>
+          <div class="method-title">Fréquence quotidienne</div>
+          <p class="method-desc">Consultation journalière des flux RSS et alertes CVE automatiques par e-mail.</p>
+        </div>
+        <div class="method-card">
+          <div class="method-num">[03]</div>
+          <div class="method-title">Outils de veille</div>
+          <p class="method-desc">Feedly, Google Alerts, agrégateurs RSS et flux Telegram spécialisés cybersécurité.</p>
+        </div>
+        <div class="method-card">
+          <div class="method-num">[04]</div>
+          <div class="method-title">Restitution</div>
+          <p class="method-desc">Synthèses rédigées publiées ici, avec analyse personnelle et impact pratique concret.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <span class="footer-copy">© 2026 Eliott Vicomte — BTS SIO SISR</span>
+    <div class="footer-links">
+      <a href="https://github.com/shayn-git" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/eliott-vicomte-115887398/" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script>
+    const c = document.getElementById('v-particles');
+    const ctx = c.getContext('2d');
+    function resize(){ c.width = c.offsetWidth; c.height = c.offsetHeight; }
+    resize(); window.addEventListener('resize', resize);
+    const pts = Array.from({length:35}, () => ({
+      x: Math.random()*c.width, y: Math.random()*c.height,
+      vx: (Math.random()-.5)*.3, vy: (Math.random()-.5)*.3
+    }));
+    function draw() {
+      ctx.clearRect(0,0,c.width,c.height);
+      for(let i=0;i<pts.length;i++){
+        pts[i].x+=pts[i].vx; pts[i].y+=pts[i].vy;
+        if(pts[i].x<0||pts[i].x>c.width) pts[i].vx*=-1;
+        if(pts[i].y<0||pts[i].y>c.height) pts[i].vy*=-1;
+        for(let j=i+1;j<pts.length;j++){
+          const dx=pts[i].x-pts[j].x, dy=pts[i].y-pts[j].y, d=Math.sqrt(dx*dx+dy*dy);
+          if(d<120){ ctx.beginPath(); ctx.strokeStyle=`rgba(8,145,178,${(1-d/120)*0.18})`; ctx.lineWidth=0.7; ctx.moveTo(pts[i].x,pts[i].y); ctx.lineTo(pts[j].x,pts[j].y); ctx.stroke(); }
+        }
+        ctx.beginPath(); ctx.arc(pts[i].x,pts[i].y,1.4,0,Math.PI*2);
+        ctx.fillStyle='rgba(8,145,178,0.35)'; ctx.fill();
+      }
+      requestAnimationFrame(draw);
+    }
+    draw();
+    let dotCount = 0;
+    setInterval(() => {
+      dotCount = (dotCount + 1) % 4;
+      document.querySelectorAll('.t-dots').forEach(el => { el.textContent = '.'.repeat(dotCount); });
+    }, 500);
+
+    // NAV
+    const burger = document.getElementById('burger');
+    const drawer = document.getElementById('drawer');
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('open');
+      drawer.classList.toggle('open');
+    });
+    window.addEventListener('scroll', () => {
+      document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 10);
+    });
+  </script>
+</body>
+</html>

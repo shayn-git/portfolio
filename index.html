@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Eliott Vicomte</title>
+  <link rel="icon" href="cadenas_svg.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo">ev://portfolio</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">accueil</a></li>
+      <li><a href="realisations.html">réalisations</a></li>
+      <li><a href="rectorat.html">rectorat</a></li>
+      <li><a href="veille.html">veille</a></li>
+    </ul>
+    <div class="nav-status"><div class="status-dot"></div>Disponible</div>
+    <button class="nav-burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav-drawer" id="drawer">
+    <ul>
+      <li><a href="index.html" class="active">accueil</a></li>
+      <li><a href="realisations.html">réalisations</a></li>
+      <li><a href="rectorat.html">rectorat</a></li>
+      <li><a href="veille.html">veille</a></li>
+    </ul>
+    <div class="drawer-status"><div class="status-dot"></div>Disponible</div>
+  </div>
+
+  <div class="page-wrapper">
+
+    <!-- HERO -->
+    <section class="hero">
+      <canvas id="particles" class="hero-canvas"></canvas>
+      <div class="hero-content">
+        <p class="hero-tag anim anim-d1">// BTS SIO — option SISR · Cybersécurité</p>
+        <h1 class="hero-name anim anim-d2">Eliott<br><span>Vicomte</span></h1>
+        <p class="hero-desc anim anim-d3">Étudiant en 1ʳᵉ année de BTS SIO, spécialisé en infrastructures systèmes et réseaux. Passionné par la cybersécurité, la protection des systèmes et les architectures réseaux.</p>
+        <div class="hero-actions anim anim-d4">
+          <a href="realisations.html" class="btn btn-primary">Mes réalisations →</a>
+          <a href="#cv" class="btn btn-outline">Voir le CV ↓</a>
+        </div>
+      </div>
+      <div class="terminal anim anim-d5">
+        <div class="terminal-bar">
+          <div class="t-dot"></div><div class="t-dot"></div><div class="t-dot"></div>
+          <span class="terminal-title">bash — eliott@portfolio</span>
+        </div>
+        <div class="terminal-body">
+          <div class="t-line"><span class="t-prompt">~$</span><span class="t-cmd"> whoami</span></div>
+          <div class="t-output">eliott.vicomte</div>
+          <div class="t-line"><span class="t-prompt">~$</span><span class="t-cmd"> cat formation.txt</span></div>
+          <div class="t-output">BTS SIO · SISR</div>
+          <div class="t-line"><span class="t-prompt">~$</span><span class="t-cmd"> certifications --list</span></div>
+          <div class="t-output" style="color:var(--mint)">RGPD ✓</div>
+          <div class="t-line"><span class="t-prompt">~$</span><span class="t-cmd"> status</span></div>
+          <div class="t-output" style="color:var(--mint)">Stage acquis ✓</div>
+          <div class="t-line"><span class="t-prompt">~$</span><span class="t-cursor"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPÉTENCES -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-label">01 — compétences clés</span>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon-wrap"><span class="skill-icon">[NET]</span></div>
+          <div class="skill-title">Réseaux</div>
+          <div class="skill-desc">TCP/IP, VLAN, routage, DHCP/DNS, administration Cisco, pare-feu.</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon-wrap"><span class="skill-icon">[CYBER]</span></div>
+          <div class="skill-title">Cybersécurité</div>
+          <div class="skill-desc">Analyse de vulnérabilités, Wireshark, John The Ripper, CTF/Pentest.</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon-wrap"><span class="skill-icon">[SYS]</span></div>
+          <div class="skill-title">Systèmes</div>
+          <div class="skill-desc">Linux, Windows Server, virtualisation, déploiement FOG.</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon-wrap"><span class="skill-icon">[DEV]</span></div>
+          <div class="skill-title">Scripting / Web</div>
+          <div class="skill-desc">Bash, PowerShell, MS-DOS, HTML/CSS/PHP, SQL, C#.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- À PROPOS -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-label">02 — à propos</span>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2>Sécuriser.<br>Comprendre.<br>Défendre.</h2>
+          <p>Je suis Eliott Vicomte, étudiant en BTS SIO option SISR au Campus la Châtaigneraie. Mon objectif : maîtriser les infrastructures informatiques et y apporter une sécurité solide.</p>
+          <p>Curieux et rigoureux, je m'intéresse aux tests d'intrusion, à la protection des réseaux et à la veille des menaces. Titulaire de la certification RGPD.</p>
+          <div style="margin-top:1.5rem;display:flex;gap:.75rem;flex-wrap:wrap;">
+            <a href="realisations.html" class="btn btn-primary">Voir mes réalisations →</a>
+            <a href="veille.html" class="btn btn-outline">Veille techno</a>
+          </div>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card"><span class="stat-value">BTS</span><span class="stat-label">SIO — SISR</span></div>
+          <div class="stat-card"><span class="stat-value">SISR</span><span class="stat-label">Option choisie</span></div>
+          <div class="stat-card"><span class="stat-value">CYBER</span><span class="stat-label">Spécialisation</span></div>
+          <div class="stat-card highlight"><span class="stat-value">RGPD</span><span class="stat-label">Certifié ✓</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CV INTÉGRÉ -->
+    <section class="section" id="cv">
+      <div class="section-header">
+        <span class="section-label">03 — curriculum vitae</span>
+        <div class="section-line"></div>
+        <a href="CV_Eliott_VICOMTE.pdf" download class="btn btn-mint" style="font-size:10px;padding:.45rem 1rem;flex-shrink:0">↓ PDF</a>
+      </div>
+
+      <div class="cv-layout">
+
+        <aside class="cv-aside">
+          <div class="cv-block">
+            <div class="cv-block-label">[PROFIL]</div>
+            <ul class="cv-list">
+              <li>18 ans</li><li>Permis B en cours</li><li>Autonome</li>
+              <li>Curieux</li><li>Esprit d'équipe</li><li>Ponctuel</li>
+            </ul>
+          </div>
+          <div class="cv-block">
+            <div class="cv-block-label">[CONTACT]</div>
+            <ul class="cv-contact-list">
+              <li><span class="cv-contact-icon">T</span><a href="tel:+33680371988">+33 6 80 37 19 88</a></li>
+              <li><span class="cv-contact-icon">@</span><a href="mailto:eliott.vicomte@gmail.com">eliott.vicomte@gmail.com</a></li>
+              <li><span class="cv-contact-icon">in</span><a href="https://www.linkedin.com/in/eliott-vicomte-115887398/" target="_blank">LinkedIn</a></li>
+              <li><span class="cv-contact-icon">gh</span><a href="https://github.com/shayn-git" target="_blank">GitHub</a></li>
+            </ul>
+          </div>
+          <div class="cv-block">
+            <div class="cv-block-label">[LANGUES]</div>
+            <div class="cv-lang">
+              <div class="cv-lang-item">
+                <div class="cv-lang-top"><span class="cv-lang-name">Français</span><span class="cv-lang-level">Natif</span></div>
+                <div class="cv-lang-bar"><div class="cv-lang-fill" style="width:100%"></div></div>
+              </div>
+              <div class="cv-lang-item">
+                <div class="cv-lang-top"><span class="cv-lang-name">Anglais</span><span class="cv-lang-level">Courant</span></div>
+                <div class="cv-lang-bar"><div class="cv-lang-fill" style="width:70%"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="cv-block">
+            <div class="cv-block-label">[CERTIFICATION]</div>
+            <div class="cert-badge">
+              <span class="cert-icon">✓</span>
+              <div><div class="cert-title">RGPD</div><div class="cert-sub">CNIL — 2026</div></div>
+            </div>
+          </div>
+          <div class="cv-block">
+            <div class="cv-block-label">[INTÉRÊTS]</div>
+            <div class="pills">
+              <span class="pill">CTF</span><span class="pill">Pentest</span>
+              <span class="pill">Sport</span><span class="pill">Musique</span>
+              <span class="pill">Cinéma</span><span class="pill">Jeux vidéo</span>
+            </div>
+          </div>
+        </aside>
+
+        <div class="cv-main">
+          <div class="cv-section">
+            <div class="cv-section-label">profil</div>
+            <p class="cv-intro">Étudiant en BTS SIO option SISR, je m'intéresse particulièrement à l'administration des systèmes et des réseaux. Sérieux et motivé, titulaire de la certification CNIL RGPD, je souhaite mettre mes compétences en pratique dans le domaine de la cybersécurité.</p>
+          </div>
+          <div class="cv-section">
+            <div class="cv-section-label">compétences techniques</div>
+            <div class="cv-skills">
+              <div class="cv-skill-row"><span class="cv-skill-tag">[SEC]</span><span>Cybersécurité — RGPD, Wireshark, John The Ripper, CTF/Pentest</span></div>
+              <div class="cv-skill-row"><span class="cv-skill-tag">[NET]</span><span>Réseaux — TCP/IP, VLAN, routage, DHCP/DNS, analyse de trames</span></div>
+              <div class="cv-skill-row"><span class="cv-skill-tag">[SYS]</span><span>Systèmes — Linux, Windows Server, Active Directory, virtualisation, FOG</span></div>
+              <div class="cv-skill-row"><span class="cv-skill-tag">[SCR]</span><span>Scripting — PowerShell, MS-DOS, Bash</span></div>
+              <div class="cv-skill-row"><span class="cv-skill-tag">[WEB]</span><span>Web — HTML, CSS, PHP, SQL/MySQL</span></div>
+            </div>
+          </div>
+          <div class="cv-section">
+            <div class="cv-section-label">formation</div>
+            <div class="cv-timeline">
+              <div class="cv-timeline-item">
+                <div class="cv-timeline-date">2025 — 2027</div>
+                <div><div class="cv-timeline-title">BTS SIO, option SISR</div><div class="cv-timeline-sub">Campus la Châtaigneraie · En cours</div></div>
+              </div>
+              <div class="cv-timeline-item">
+                <div class="cv-timeline-date">2022 — 2025</div>
+                <div><div class="cv-timeline-title">Bac Pro — Optique Lunetterie</div><div class="cv-timeline-sub">Lycée Professionnel Notre Dame · <span style="color:var(--mint)">Mention Très Bien</span></div></div>
+              </div>
+              <div class="cv-timeline-item">
+                <div class="cv-timeline-date">2018 — 2022</div>
+                <div><div class="cv-timeline-title">Brevet des Collèges</div><div class="cv-timeline-sub">Collège Henri Matisse</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="cv-section">
+            <div class="cv-section-label">expériences</div>
+            <div class="cv-timeline">
+              <div class="cv-timeline-item">
+                <div class="cv-timeline-date">Stage · 5 sem.</div>
+                <div><div class="cv-timeline-title">Promosoft Informatique — Rouen</div><div class="cv-timeline-sub">Déploiement d'infrastructures systèmes et réseaux, supervision des équipements, configuration de services (GPO, SNMP) et administration de solutions de sécurité.</div></div>
+              </div>
+              <div class="cv-timeline-item">
+                <div class="cv-timeline-date">Stage · 10 sem.</div>
+                <div><div class="cv-timeline-title">Écouter Voir — Sotteville-lès-Rouen</div><div class="cv-timeline-sub">Accueil et conseil des clients pour le choix de lunettes et lentilles.</div></div>
+              </div>
+              <div class="cv-timeline-item">
+                <div class="cv-timeline-date">Stage · 7 sem.</div>
+                <div><div class="cv-timeline-title">Écouter Voir — Grand-Couronne</div><div class="cv-timeline-sub">Gestion des stocks, commandes et réglages des produits optiques.</div></div>
+              </div>
+              <div class="cv-timeline-item">
+                <div class="cv-timeline-date">Stage · 3 sem.</div>
+                <div><div class="cv-timeline-title">Optic 2000 — Sotteville-lès-Rouen</div><div class="cv-timeline-sub">Compétences relationnelles, commerciales et organisationnelles.</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <span class="footer-copy">© 2026 Eliott Vicomte — BTS SIO SISR</span>
+    <div class="footer-links">
+      <a href="https://github.com/shayn-git" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/eliott-vicomte-115887398/" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script>
+    // NAV — burger + scroll
+    const burger = document.getElementById('burger');
+    const drawer = document.getElementById('drawer');
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('open');
+      drawer.classList.toggle('open');
+    });
+    window.addEventListener('scroll', () => {
+      document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 10);
+    });
+  </script>
+
+  <script>
+    const c = document.getElementById('particles');
+    const ctx = c.getContext('2d');
+    function resize(){ c.width = c.offsetWidth; c.height = c.offsetHeight; }
+    resize(); window.addEventListener('resize', resize);
+    const pts = Array.from({length:50}, () => ({
+      x: Math.random()*c.width, y: Math.random()*c.height,
+      vx: (Math.random()-.5)*.35, vy: (Math.random()-.5)*.35
+    }));
+    function draw() {
+      ctx.clearRect(0,0,c.width,c.height);
+      for(let i=0;i<pts.length;i++){
+        pts[i].x+=pts[i].vx; pts[i].y+=pts[i].vy;
+        if(pts[i].x<0||pts[i].x>c.width) pts[i].vx*=-1;
+        if(pts[i].y<0||pts[i].y>c.height) pts[i].vy*=-1;
+        for(let j=i+1;j<pts.length;j++){
+          const dx=pts[i].x-pts[j].x, dy=pts[i].y-pts[j].y, d=Math.sqrt(dx*dx+dy*dy);
+          if(d<130){ ctx.beginPath(); ctx.strokeStyle=`rgba(8,145,178,${(1-d/130)*0.25})`; ctx.lineWidth=0.8; ctx.moveTo(pts[i].x,pts[i].y); ctx.lineTo(pts[j].x,pts[j].y); ctx.stroke(); }
+        }
+        ctx.beginPath(); ctx.arc(pts[i].x,pts[i].y,1.8,0,Math.PI*2); ctx.fillStyle='rgba(8,145,178,0.5)'; ctx.fill();
+      }
+      requestAnimationFrame(draw);
+    }
+    draw();
+  </script>
+</body>
+</html>
